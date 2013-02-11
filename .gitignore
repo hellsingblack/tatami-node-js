@@ -1,0 +1,22 @@
+############
+## Windows
+############
+
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+############
+## OSX
+############
+
+# Mac crap
+.DS_Store
+
+#############
+## Node.JS
+#############
+node_modules/
+npm-debug.log
