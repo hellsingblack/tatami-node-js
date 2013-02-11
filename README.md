@@ -1,4 +1,8 @@
 tatami-node-js
 ==============
 
-Tatami version node js
+npm install
+
+jade 
+express
+mongoose
