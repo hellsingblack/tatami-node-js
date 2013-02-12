@@ -1,6 +1,4 @@
-var _ = require('underscore');
-
-//  Modèle utilisateur
+//User model
 
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
@@ -9,35 +7,62 @@ var ObjectId = Schema.Types.ObjectId;
 var DBRef = mongoose.mongo.DBRef;
 
 var Users = new Schema({
-  username : {
-    type : String,
-    required : true,
-    unique : true
-  },
-  password : {
-    type : String,
-    required : true
-  },
-  email : {
-    type : String,
-    required : true,
-    unique : true
-  },
-  //  Le compte est désactivé par défaut, il faut l'activer par mail.
-  verified : {
-    type : Boolean,
-    required : true,
-    default : false
-  },
-  //  Informations de l'utilisateur
-  profil : {
-    firstname : {
-      type : String
+    attachmentsSize: {
+        type : Number,
+        required : true,
+        unique : true
     },
-    lastname : {
-      type : String
+    domain: {
+        type : String,
+        required : true,
+        unique : true
+    },
+    firstName: {
+        type : String,
+        required : true,
+        unique : true
+    },
+    gravatar: {
+        type : String,
+        required : true,
+        unique : true
+    },
+    isNew: {
+        type : Boolean,
+        required : true,
+        unique : true
+    },
+    jobTitle: {
+        type : String,
+        required : true,
+        unique : true
+    },
+    lastName: {
+        type : String,
+        required : true,
+        unique : true
+    },
+    password: {
+        type : String,
+        required : true,
+        unique : true
+    },
+
+    phoneNumber: {
+        type : Number,
+        required : true,
+        unique : true
+    },
+    theme: {
+        type : String,
+        required : true,
+        unique : true
+    },
+    username: {
+        type: String,
+        required: true,
+        unique: true
     }
-  }
 });
 
 Users.path('email').set(function (v) {
