@@ -1,11 +1,11 @@
-
 /**
  * Module dependencies.
  */
 
-var express = require('express')
-  , http = require('http')
-  , path = require('path');
+var express = require('express'), 
+    http = require('http'), 
+    path = require('path'),
+    router = require('./router');
 
 var app = express();
 
@@ -26,7 +26,7 @@ app.configure('development', function(){
 });
 
 // Définition des routes
-require('./router')(app);
+router(app);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
